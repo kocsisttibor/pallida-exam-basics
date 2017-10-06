@@ -52,7 +52,8 @@ class CandyShop(object):
 
 
     def __str__(self):
-        return "Inventory: {} candies, {} lollipops, Income: {}, Sugar: {}gr".format(self.candies, self.lollipops, self.income, self.sugar)
+        return "Inventory: {} candies, {} lollipops, Income: {}, Sugar: {}gr"\
+                .format(self.candies, self.lollipops, self.income, self.sugar)
     
     
     def create_sweets(self, sweet_type):
@@ -84,3 +85,6 @@ class CandyShop(object):
             self.income -= amount * self.price_sugar
         else:
             print("You have not enough money.")
+
+candy = CandyShop(300)
+print(candy)
