@@ -17,15 +17,20 @@ def get_arguments():
 
 
 def read_from_file():
-    pass
+    with open(database) as f:
+        return f.read().splitlines()
 
 
 def not_in_database(favourite):
-    pass
+    return favourite not in read_from_file()
 
 
 def add_favourites(favourites):
-    pass
+    extended_favourites = read_from_file()
+    for favourite in set(favourites):
+        if not_in_database(favourite):
+            extended_favourites.append(favourite)
+    return extended_favourites
 
 
 def write_to_file(favourites):
