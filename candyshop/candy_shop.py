@@ -17,27 +17,27 @@
 # The CandyShop should be represented as string in this format:
 # "Inventory: 3 candies, 2 lollipops, Income: 100, Sugar: 400gr"
 
-candy_shop = CandyShop(300)
-candy_shop.create_sweets("candy")
-candy_shop.create_sweets("candy")
-candy_shop.create_sweets("lollipop")
-candy_shop.create_sweets("lollipop")
-print(candy_shop)
-# Should print out:
-# Invetory: 2 candies, 2 lollipops, Income: 0, Sugar: 270gr
-candy_shop.sell("candy", 1)
-print(candy_shop
-# Should print out:
-# "Invetory: 1 candies, 2 lollipops, Income:20, Sugar: 285gr"
-candy_shop.raise_prices(5)
-candy_shop.sell("lollipop", 1)
-print(candy_shop)
-# Should print out:
-# "Invetory: 1 candies, 1 lollipops, Income:35, Sugar: 285gr"
-candy_shop.buy_sugar(300)
-print(candy_shop)
-# Should print out:
-# "Invetory: 1 candies, 1 lollipops, Income:5, Sugar: 315gr"
+# candy_shop = CandyShop(300)
+# candy_shop.create_sweets("candy")
+# candy_shop.create_sweets("candy")
+# candy_shop.create_sweets("lollipop")
+# candy_shop.create_sweets("lollipop")
+# print(candy_shop)
+# # Should print out:
+# # Invetory: 2 candies, 2 lollipops, Income: 0, Sugar: 270gr
+# candy_shop.sell("candy", 1)
+# print(candy_shop
+# # Should print out:
+# # "Invetory: 1 candies, 2 lollipops, Income:20, Sugar: 285gr"
+# candy_shop.raise_prices(5)
+# candy_shop.sell("lollipop", 1)
+# print(candy_shop)
+# # Should print out:
+# # "Invetory: 1 candies, 1 lollipops, Income:35, Sugar: 285gr"
+# candy_shop.buy_sugar(300)
+# print(candy_shop)
+# # Should print out:
+# # "Invetory: 1 candies, 1 lollipops, Income:5, Sugar: 315gr"
 
 class CandyShop(object):
 
@@ -48,8 +48,8 @@ class CandyShop(object):
         self.lollipops = 0
 
 
-    def review(self):
-        pass
+    def __str__(self):
+        return "Inventory: {} candies, {} lollipops, Income: {}, Sugar: {}gr".format(self.candies, self.lollipops, self.income, self.sugar)
     
     
     def create_sweets(self, sweet_type):
@@ -66,3 +66,6 @@ class CandyShop(object):
 
     def buy_sugar(self, amount):
         pass
+
+candy_shop = CandyShop(300)
+print(candy_shop)
