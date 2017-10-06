@@ -36,4 +36,4 @@ Both are pieces of code with identifying name. They can take data and operate on
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
-Constructor is a special piece of code called to create an object of a class. It can accept arguments and use them to set variables assigned to object. It is used, when every object of the class is required to be created with the same variables and methods. These variables and methods are set in the constructor.
+Constructor is a special piece of code called to create an object of a class. It can accept arguments and use them to set variables assigned to object. It is used, when every object of the class are required to be created with the same variables and methods. These variables and methods are set in the constructor.
