@@ -34,10 +34,18 @@ def add_favourites(favourites):
 
 
 def write_to_file(favourites):
-    pass
+    with open(database, "w") as f:
+        for favourite in favourites:
+            f.write(favourite)
+            f.write("\n")
 
 
 def controller():
-    pass
+    arguments = get_arguments()
+    if len(arguments) == 1:
+        print("fav_animals [animal] [animal]")
+    else:
+        favourites = arguments[1:]
+        write_to_file(add_favourites(favourites))
 
-# controller()
+controller()
