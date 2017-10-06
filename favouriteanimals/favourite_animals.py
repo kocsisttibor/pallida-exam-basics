@@ -7,3 +7,32 @@
 # One animal should be stored only at once
 # Each animal should be written in separate lines
 # The program should only save animals, no need to print them
+
+import sys
+
+database = "favourites.txt"
+
+def get_arguments():
+    return sys.argv
+
+
+def read_from_file():
+    pass
+
+
+def not_in_database(favourite):
+    pass
+
+
+def add_favourites(favourites):
+    pass
+
+
+def write_to_file(favourites):
+    pass
+
+
+def controller():
+    pass
+
+# controller()
