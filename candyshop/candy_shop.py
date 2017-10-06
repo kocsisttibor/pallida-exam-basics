@@ -38,3 +38,31 @@ candy_shop.buy_sugar(300)
 print(candy_shop)
 # Should print out:
 # "Invetory: 1 candies, 1 lollipops, Income:5, Sugar: 315gr"
+
+class CandyShop(object):
+
+    def __init__(self, sugar):
+        self.sugar = sugar
+        self.income = 0
+        self.candies = 0
+        self.lollipops = 0
+
+
+    def review(self):
+        pass
+    
+    
+    def create_sweets(self, sweet_type):
+        pass
+
+
+    def sell(self, sweet_type, number):
+        pass
+
+
+    def raise_prices(self, percentage):
+        pass
+
+
+    def buy_sugar(self, amount):
+        pass
