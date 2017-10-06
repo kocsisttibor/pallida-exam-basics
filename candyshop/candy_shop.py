@@ -79,19 +79,8 @@ class CandyShop(object):
 
 
     def buy_sugar(self, amount):
-        self.sugar += amount
-        self.income -= amount * self.price_sugar
-
-candy_shop = CandyShop(300)
-print(candy_shop)
-candy_shop.create_sweets("candy")
-candy_shop.create_sweets("candy")
-candy_shop.create_sweets("lollipop")
-print(candy_shop)
-candy_shop.sell("candy", 2)
-print(candy_shop)
-candy_shop.raise_prices(10)
-candy_shop.sell("lollipop", 1)
-print(candy_shop)
-candy_shop.buy_sugar(200)
-print(candy_shop)
+        if self.income >= amount * self.price_sugar:
+            self.sugar += amount
+            self.income -= amount * self.price_sugar
+        else:
+            print("You have not enough money.")
