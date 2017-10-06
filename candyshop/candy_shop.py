@@ -46,6 +46,8 @@ class CandyShop(object):
         self.income = 0
         self.candies = 0
         self.lollipops = 0
+        self.price_candy = 20
+        self.price_lollipop = 10
 
 
     def __str__(self):
@@ -53,11 +55,21 @@ class CandyShop(object):
     
     
     def create_sweets(self, sweet_type):
-        pass
+        if sweet_type == "candy":
+            self.candies += 1
+            self.sugar -= 10
+        elif sweet_type == "lollipop":
+            self.lollipops += 1
+            self.sugar -= 5
 
 
     def sell(self, sweet_type, number):
-        pass
+        if sweet_type == "candy":
+            self.candies -= number
+            self.income += number * self.price_candy
+        elif sweet_type == "lollipop":
+            self.lollipops -= number
+            self.income += number * self.price_lollipop
 
 
     def raise_prices(self, percentage):
